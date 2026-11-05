@@ -33,6 +33,9 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | F-21 | PEFT — Hotswapping adapters (documentación) | Hugging Face | https://huggingface.co/docs/peft/package_reference/hotswap | P | resumen | 2026-11-05 | mapa §3.1 |
 | F-22 | llama.cpp server README (flags `--lora`, `--lora-scaled`, `--lora-init-without-apply`, campo `lora` por petición) | ggml-org | https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md | P | parcial | 2026-11-05 | hardware.md |
 | F-23 | Ollama — Modelfile (documentación); la versión actual no muestra la instrucción `ADAPTER` | Ollama | https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx | P | parcial | 2026-11-05 | hardware.md |
+| F-24 | Qwen3.5-0.8B — ficha oficial (arquitectura 6 × (3 × Gated DeltaNet + 1 × Gated Attention), 24 capas) | Qwen | https://huggingface.co/Qwen/Qwen3.5-0.8B | P | resumen | 2026-11-05 | CLAUDE.md, hardware.md |
+| F-25 | easyeditor en PyPI (soporte de Qwen desde oct-2023; versiones Qwen2.5/Qwen3 sin confirmar) | zjunlp | https://pypi.org/project/easyeditor/ | P | resumen | 2026-11-05 | hardware.md |
+| F-26 | llama.cpp en winget (`ggml.llamacpp`, versión b12121) | ggml-org | https://github.com/ggml-org/llama.cpp | P | parcial | 2026-11-05 | hardware.md |
 
 ## Fuentes secundarias (contexto; no citar como evidencia)
 
@@ -46,6 +49,10 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | S-06 | Solenya: "Cognitive core" (opinión sobre la idea de Karpathy) | https://solenya.ai/blog/22-cognitive-core | resumen | 2026-11-05 | No es fuente primaria de Karpathy; falta encontrar la original. |
 | S-07 | killerstorm: Cognitive core | https://killerstorm.github.io/ai/2025/11/04/cogcore.html | resumen | 2026-11-05 | |
 | S-08 | Preprint sobre benchmarks de edición (INLAY) | https://arxiv.org/abs/2608.26292 | resumen | 2026-11-05 | Reporta WISE débil y AlphaEdit fuerte en EasyEdit; sin revisión por pares. |
+| S-09 | Ertas AI: mejores LLM chicos para local 2026 | https://www.ertas.ai/best/best-small-llm-for-local-deployment | resumen | 2026-11-05 | Ranking tipo SEO. |
+| S-10 | PromptQuorum: modelos locales chicos 2026 | https://www.promptquorum.com/local-llms/small-local-llm-models | resumen | 2026-11-05 | Ranking tipo SEO. |
+| S-11 | localaimaster: guía de modelos chicos 2026 | https://localaimaster.com/blog/small-language-models-guide-2026 | resumen | 2026-11-05 | Ranking tipo SEO. |
+| S-12 | trilogyai: Deep dive de Qwen 3.5 | https://trilogyai.substack.com/p/deep-dive-qwen-35-brings-native-multimodality | resumen | 2026-11-05 | Confirma patrón 3:1 DeltaNet/atención. |
 
 ## Buscado y no encontrado
 
@@ -54,3 +61,4 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | Formato ".SBF" (semantic block format) para LoRA | 2026-11-05 | Sin resultados; se considera sin respaldo. |
 | Vínculo entre MoNe y Qualcomm | 2026-11-05 | No encontrado. |
 | Afirmación "LoRA learns less, forgets less" | 2026-11-05 | Pendiente; no apareció en la búsqueda. |
+| Soporte de Qwen2.5/Qwen3 en EasyEdit y en TransformerLens | 2026-11-05 | No confirmado en la documentación; probar en E1/E4. |
