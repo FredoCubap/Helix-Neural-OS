@@ -9,7 +9,8 @@
 | RAM | 39,7 GB |
 | Disco libre (C:) | 343 GB |
 | SO | Windows 11 Pro |
-| Ollama | 0.34.1 instalado, sin modelos descargados (hay una actualización a 0.40.14 descargada, sin aplicar) |
+| Ollama | 0.40.14 (actualizado con winget el 2026-11-05), sin modelos descargados |
+| llama.cpp | build b12121 (winget `ggml.llamacpp`, binarios **Vulkan** x64). `llama-cli --list-devices` detecta `Vulkan0: Intel(R) Iris(R) Xe Graphics (20301 MiB)` — memoria compartida con la RAM |
 
 ## Qué no corre aquí
 
@@ -18,6 +19,8 @@
 - **Entrenar LoRA sobre modelos de 7–8B**: imposible en tiempo razonable en CPU.
 
 ## Qué sí corre aquí
+
+- **Aceleración parcial por Vulkan**: la build de llama.cpp usa la Iris Xe vía Vulkan con ~20 GB de memoria compartida. Medir en E1 si conviene frente a CPU pura (`-ngl 0` vs. `-ngl 99`); en GPUs integradas no siempre gana.
 
 - **Inferencia de modelos cuantizados GGUF** con Ollama o llama.cpp: modelos 1–4B con fluidez, 7–8B lento pero usable (40 GB de RAM alcanzan).
 - **LoRA por petición con llama-server (llama.cpp)** [F-22]: `--lora` carga varios adaptadores, `--lora-init-without-apply` los carga sin aplicar, y cada petición elige cuáles usar y con qué peso (campo `lora`, con `id` y `scale`). Esto es un **sustituto local del multi-LoRA de vLLM**, y además permite mezclar adaptadores con pesos (como en LORAUTER).
