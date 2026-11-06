@@ -36,6 +36,8 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | F-24 | Qwen3.5-0.8B — ficha oficial (arquitectura 6 × (3 × Gated DeltaNet + 1 × Gated Attention), 24 capas) | Qwen | https://huggingface.co/Qwen/Qwen3.5-0.8B | P | resumen | 2026-11-05 | CLAUDE.md, hardware.md |
 | F-25 | easyeditor en PyPI (soporte de Qwen desde oct-2023; versiones Qwen2.5/Qwen3 sin confirmar) | zjunlp | https://pypi.org/project/easyeditor/ | P | resumen | 2026-11-05 | hardware.md |
 | F-26 | llama.cpp en winget (`ggml.llamacpp`, versión b12121) | ggml-org | https://github.com/ggml-org/llama.cpp | P | parcial | 2026-11-05 | hardware.md |
+| F-27 | Qwen/Qwen2.5-0.5B-Instruct (ficha y pesos oficiales, rev. `7ae5576`) | Qwen | https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct | P | parcial | 2026-11-06 | hardware.md |
+| F-28 | Índice de wheels CPU de PyTorch | PyTorch | https://download.pytorch.org/whl/cpu | P | parcial | 2026-11-06 | requirements/cpu.txt |
 
 ## Fuentes secundarias (contexto; no citar como evidencia)
 
