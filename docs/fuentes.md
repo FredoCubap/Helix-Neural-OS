@@ -42,6 +42,14 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | F-30 | LoRA Text-to-SQL para Qwen2.5-0.5B-Instruct (rev. `427e5ed`; r=16, 7 módulos; 425 ejemplos; 0 % exact match en Spider) | vindows, 2025 | https://huggingface.co/vindows/qwen2.5-0.5b-text-to-sql | P | parcial (ficha) | 2026-11-06 | E1 |
 | F-31 | Dataset de entrenamiento del LoRA Python (sin licencia declarada) | bernabepuente | https://huggingface.co/datasets/bernabepuente/python-instruction-dataset | P | no leído | 2026-11-06 | E1 |
 | F-32 | Descartado: LoRA PubMedQA (base `unsloth/qwen2.5-0.5b-instruct-unsloth-bnb-4bit`, no coincide con la nuestra) | ShahzebKhoso, 2025 | https://huggingface.co/ShahzebKhoso/qwen2.5-instruct-0.5B-pubmedqa-lora | P | config | 2026-11-06 | — |
+| F-33 | Sentient Sands — mod de Kenshi que reemplaza el diálogo por un LLM (backend: Player2 o cualquier API compatible con OpenAI; requiere RE_Kenshi y KenshiLib; soporta español) | Harvicus | https://harvicus.itch.io/sentientsands · https://www.nexusmods.com/kenshi/mods/1872 | P | resumen | 2026-11-06 | visión Kenshi |
+| F-34 | Kenshi Virtual Simulation Engine (compatible con Sentient Sands) | problemchild1500 | https://problemchild1500.itch.io/kenshi-virtual-simulation-engine | P | resumen | 2026-11-06 | visión Kenshi |
+
+## Datos propios
+
+| ID | Dataset | Origen | Ubicación | Fecha | Nota |
+|---|---|---|---|---|---|
+| D-01 | `Kenshi_Dataset-ES_final.jsonl` — 1.029 pares ShareGPT (lore + diálogos de NPC), ~85,6 k tokens Qwen | Creado por Fredo: lore copiado a mano de la wiki oficial de Kenshi a un .md, traducido a ShareGPT; parte del JSONL automatizada con DeepSeek | `data/kenshi/` (fuera de git: texto derivado de Lo-Fi Games) | 2026-11-06 | Las partes generadas con DeepSeek pueden tener errores de formato (acotaciones sin marcar) o de contenido; verificar hechos de evaluación contra la wiki. |
 
 ## Fuentes secundarias (contexto; no citar como evidencia)
 
