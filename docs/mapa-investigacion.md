@@ -90,7 +90,7 @@ El problema duro **no es servir LoRAs** (eso está resuelto). El problema duro e
 |---|---|---|---|
 | E0 | ✅ Inventario de hardware: sin GPU dedicada, 40 GB de RAM (ver `hardware.md`). Modelo base de laboratorio: 0,5–1,5B | Restricciones | Hecho |
 | E1 | ✅ llama-server + 2 LoRA por petición: cambio sin costo de carga, ~20 % más de lectura de prompt por LoRA activo; el LoRA "SQL" es peor que la base; mezclar a escala completa degrada. Ver `experiments/e1/` | Valida §2 (lo "resuelto") | Hecho |
-| E2 | Corpus de hechos sintéticos (estilo Physics of LMs) → LoRA con next-token vs. con Deep Context Distillation | Q1, Q2 | Medio |
+| E2 | 🔄 (rama `exp/e2-kenshi`) LoRA sobre el lore de Kenshi (D-01), entrenado en T4: paráfrasis ~26 % (cota superior), recombina entidades, más alucinación y daño fuera de dominio; separar lore de voces mantiene respuestas neutrales. Ver `experiments/e2/README.md` | Q1, Q2 | En curso |
 | E3 | Mismo corpus: LoRA vs. RAG vs. LoRA+RAG | Q1, lado "liberar contexto" | Medio |
 | E4 | Editar 10 hechos con EasyEdit (AlphaEdit) en el base y en base+LoRA fusionado | Q4 | Medio |
 | E5 | Prototipo de memory layer / WISE como alternativa | Q5 | Alto |
