@@ -1,0 +1,71 @@
+{"id": "par-00", "cat": "parafrasis", "q": "¿Quién gobierna actualmente las Ciudades Unidas como emperador?", "must": [["tengu"]], "must_not": [], "src": [22, 80], "anchor": null}
+{"id": "par-01", "cat": "parafrasis", "q": "¿Desde qué ciudad gobierna el Emperador Tengu?", "must": [["sopeso"]], "must_not": [], "src": [22], "anchor": null}
+{"id": "par-02", "cat": "parafrasis", "q": "¿Qué emperador murió durante la Rebelión Roja?", "must": [["anzai"]], "must_not": [], "src": [23, 82], "anchor": null}
+{"id": "par-03", "cat": "parafrasis", "q": "¿Qué esqueleto fundó el Segundo Imperio?", "must": [["cat-lon", "cat lon", "catlon"]], "must_not": [], "src": [5], "anchor": null}
+{"id": "par-04", "cat": "parafrasis", "q": "¿En qué región vive exiliado Cat-Lon el Loco?", "must": [["cenicienta"]], "must_not": [], "src": [8, 38], "anchor": null}
+{"id": "par-05", "cat": "parafrasis", "q": "¿Cómo se llaman los esqueletos de combate leales a Cat-Lon?", "must": [["tormenta"]], "must_not": [], "src": [8], "anchor": null}
+{"id": "par-06", "cat": "parafrasis", "q": "En la fe de la Nación Sagrada, ¿qué diosa de la oscuridad se opone a Okran?", "must": [["narko"]], "must_not": [], "src": [10], "anchor": null}
+{"id": "par-07", "cat": "parafrasis", "q": "¿A qué dios adoran los ciudadanos de la Nación Sagrada?", "must": [["okran"]], "must_not": [], "src": [9, 86], "anchor": null}
+{"id": "par-08", "cat": "parafrasis", "q": "¿Qué número de Fénix lidera hoy la Nación Sagrada?", "must": [["62"]], "must_not": [], "src": [11, 87], "anchor": null}
+{"id": "par-09", "cat": "parafrasis", "q": "Nombra a los dos Inquisidores Supremos de la Nación Sagrada.", "must": [["seta"], ["valtena"]], "must_not": [], "src": [12, 89], "anchor": null}
+{"id": "par-10", "cat": "parafrasis", "q": "¿Quién es la reina del Reino Shek?", "must": [["esata"]], "must_not": [], "src": [17, 92], "anchor": null}
+{"id": "par-11", "cat": "parafrasis", "q": "¿Qué nombre de batalla tiene Esata?", "must": [["golem"]], "must_not": [], "src": [17, 92], "anchor": null}
+{"id": "par-12", "cat": "parafrasis", "q": "¿Qué guerrero legendario unificó a las tribus Shek?", "must": [["kral"]], "must_not": [], "src": [14, 93], "anchor": null}
+{"id": "par-13", "cat": "parafrasis", "q": "¿Cómo llaman los Shek a su más allá?", "must": [["puerta"]], "must_not": [], "src": [15], "anchor": null}
+{"id": "par-14", "cat": "parafrasis", "q": "Nombra una facción Shek que se rebela contra Esata.", "must": [["banda de huesos", "elegidos de kral", "berserker"]], "must_not": [], "src": [19, 94], "anchor": null}
+{"id": "par-15", "cat": "parafrasis", "q": "¿Quién lidera a los Antiesclavistas?", "must": [["tinfist"]], "must_not": [], "src": [31, 74, 96, 100], "anchor": null}
+{"id": "par-16", "cat": "parafrasis", "q": "¿Quién es la líder de los Ninjas Flotsam?", "must": [["moll"]], "must_not": [], "src": [30, 95], "anchor": null}
+{"id": "par-17", "cat": "parafrasis", "q": "¿En qué bosque está la Aldea Flotsam?", "must": [["oculto"]], "must_not": [], "src": [30, 95], "anchor": null}
+{"id": "par-18", "cat": "parafrasis", "q": "¿Cuál es la ciudad principal de los Cazadores Tecnológicos?", "must": [["fin del mundo"]], "must_not": [], "src": [32, 97, 98], "anchor": null}
+{"id": "par-19", "cat": "parafrasis", "q": "¿Quiénes fundaron a los Cazadores Tecnológicos?", "must": [["maquinista"]], "must_not": [], "src": [32, 97], "anchor": null}
+{"id": "par-20", "cat": "parafrasis", "q": "¿A qué campo de trabajo forzado envía la Nación Sagrada a los herejes?", "must": [["renacimiento"]], "must_not": [], "src": [90, 128], "anchor": null}
+{"id": "par-21", "cat": "parafrasis", "q": "¿Qué región próspera de las Ciudades Unidas invadió la Nación Sagrada?", "must": [["bast"]], "must_not": [], "src": [25, 27, 102], "anchor": null}
+{"id": "par-22", "cat": "parafrasis", "q": "¿Cómo se llama la prisión secreta del Emperador?", "must": [["boveda"]], "must_not": [], "src": [40, 60, 67, 81, 127], "anchor": null}
+{"id": "par-23", "cat": "parafrasis", "q": "¿Qué rebelde asesino de nobles fue obligado a escribir un libro alabando al Emperador?", "must": [["luquin"]], "must_not": [], "src": [29, 73, 99], "anchor": null}
+{"id": "par-24", "cat": "parafrasis", "q": "¿En qué región se cultiva el cáñamo con el que se hace hachís?", "must": [["pantano"]], "must_not": [], "src": [41, 120, 132], "anchor": null}
+{"id": "par-25", "cat": "parafrasis", "q": "¿Cuánto vale la recompensa por la cabeza del Maestro de los Bichos?", "must": [["100,000", "100.000", "100000", "cien mil"]], "must_not": [], "src": [42, 101], "anchor": null}
+{"id": "par-26", "cat": "parafrasis", "q": "¿Dónde vive el Maestro de los Bichos?", "must": [["torre de los bichos"]], "must_not": [], "src": [42, 101], "anchor": null}
+{"id": "par-27", "cat": "parafrasis", "q": "¿Qué arma inventaron los rebeldes para enfrentarse a los samuráis?", "must": [["ballesta"]], "must_not": [], "src": [20, 43, 59], "anchor": null}
+{"id": "par-28", "cat": "parafrasis", "q": "¿Cómo se deshicieron los Antiguos de los Behemoths?", "must": [["metal fundido", "pozo"]], "must_not": [], "src": [2, 64], "anchor": null}
+{"id": "par-29", "cat": "parafrasis", "q": "¿En qué región sigue activo un segundo Ojo?", "must": [["venganza"]], "must_not": [], "src": [35, 65], "anchor": null}
+{"id": "par-30", "cat": "parafrasis", "q": "¿Qué señal muestran casi todos los restos de esqueletos encontrados?", "must": [["suicid"]], "must_not": [], "src": [36, 52, 66], "anchor": null}
+{"id": "par-31", "cat": "parafrasis", "q": "¿Cuáles son las tres castas de los Hivers?", "must": [["principe"], ["obrero"], ["soldado"]], "must_not": [], "src": [39, 56], "anchor": null}
+{"id": "par-32", "cat": "parafrasis", "q": "¿Cuál es la capital del Reino Shek?", "must": [["admag"]], "must_not": [], "src": [124], "anchor": null}
+{"id": "par-33", "cat": "parafrasis", "q": "¿Cuál es la capital de las Ciudades Unidas?", "must": [["sopeso"]], "must_not": [], "src": [124], "anchor": null}
+{"id": "par-34", "cat": "parafrasis", "q": "¿Por qué costa deambulan los Leviatanes?", "must": [["costa del leviatan"]], "must_not": [], "src": [116, 123, 146, 153], "anchor": null}
+{"id": "par-35", "cat": "parafrasis", "q": "¿Qué enjambre de Hivers tiene su hogar en Vain?", "must": [["occidental"]], "must_not": [], "src": [122, 152], "anchor": null}
+{"id": "par-36", "cat": "parafrasis", "q": "¿Cómo se llama la cabra famosa de Kenshi?", "must": [["cornelius"]], "must_not": [], "src": [117, 147], "anchor": null}
+{"id": "par-37", "cat": "parafrasis", "q": "¿En qué zona está el Complejo de Talleres?", "must": [["cuadricula"]], "must_not": [], "src": [161, 186], "anchor": null}
+{"id": "par-38", "cat": "parafrasis", "q": "¿Cuántos Laboratorios Antiguos hay repartidos por el mundo?", "must": [["nueve", "9"]], "must_not": [], "src": [162, 187], "anchor": null}
+{"id": "par-39", "cat": "parafrasis", "q": "¿Qué arañas custodian los Laboratorios Antiguos?", "must": [["seguridad"]], "must_not": [], "src": [162, 187], "anchor": null}
+{"id": "par-40", "cat": "parafrasis", "q": "¿Qué les ofrecen los Black Dog a los viajeros a cambio de dinero?", "must": [["protecci", "proteg", "extorsi"]], "must_not": [], "src": [166, 188, 195], "anchor": null}
+{"id": "par-41", "cat": "parafrasis", "q": "¿Qué objeto se usa para curar a un esqueleto?", "must": [["kit de reparacion", "kits de reparacion"]], "must_not": [], "src": [109, 140], "anchor": null}
+{"id": "par-42", "cat": "parafrasis", "q": "¿Cómo se consiguen las armas Meitou?", "must": [["jefe"]], "must_not": [], "src": [110, 141], "anchor": null}
+{"id": "par-43", "cat": "parafrasis", "q": "¿Qué papel cumplían los Shek durante el Segundo Imperio?", "must": [["ejecutor"]], "must_not": [], "src": [47, 68], "anchor": null}
+{"id": "par-44", "cat": "parafrasis", "q": "¿Con qué otro nombre se conoce a las Ciudades Unidas?", "must": [["imperio"]], "must_not": [], "src": [78], "anchor": null}
+{"id": "par-45", "cat": "parafrasis", "q": "¿Con qué otro nombre se conoce a los Caníbales?", "must": [["tribu pintada"]], "must_not": [], "src": [33], "anchor": null}
+{"id": "par-46", "cat": "parafrasis", "q": "¿A quiénes no les hace daño la lluvia ácida?", "must": [["esqueleto"]], "must_not": [], "src": [170, 190], "anchor": null}
+{"id": "hol-47", "cat": "holdout", "q": "¿Cuántos días dura un año en Kenshi?", "must": [["100", "cien"]], "must_not": [], "src": [171], "anchor": "100 d[ií]as|dura un a[ñn]o"}
+{"id": "hol-48", "cat": "holdout", "q": "¿En qué zona está el asentamiento neutral El Cubo?", "must": [["fronteriza"]], "must_not": [], "src": [126], "anchor": "\\bel cubo\\b|zona fronteriza"}
+{"id": "hol-49", "cat": "holdout", "q": "¿Qué sistema hace que el mundo cambie si matas o encarcelas a personajes clave?", "must": [["estados del mundo"]], "must_not": [], "src": [37], "anchor": "estados del mundo"}
+{"id": "hol-50", "cat": "holdout", "q": "¿A partir de qué puntuación de relación una facción te considera aliado?", "must": [["50"]], "must_not": [], "src": [76], "anchor": "\\+50|-30"}
+{"id": "hol-51", "cat": "holdout", "q": "Nombra a un miembro del Círculo Noble de las Ciudades Unidas.", "must": [["sanda", "tsugi", "inaba", "shiro", "nagata", "ohta", "yoshinaga", "merin"]], "must_not": [], "src": [21], "anchor": "c[ií]rculo noble|\\b(sanda|tsugi|inaba|nagata|ohta|yoshinaga|merin)\\b"}
+{"id": "hol-52", "cat": "holdout", "q": "¿Qué general se cree que lideraba a los Caballeros Hidráulicos?", "must": [["jang"]], "must_not": [], "src": [6], "anchor": "\\bjang\\b|hidr[aá]ulic"}
+{"id": "hol-53", "cat": "holdout", "q": "¿Qué estilo de combate usan los Bandidos Gorrillo?", "must": [["artes marciales", "artista"]], "must_not": [], "src": [167], "anchor": "gorrillo"}
+{"id": "hol-54", "cat": "holdout", "q": "¿Qué libro critica al Emperador Tengu tras su llegada al poder?", "must": [["titere"]], "must_not": [], "src": [44, 61], "anchor": "t[ií]tere"}
+{"id": "hol-55", "cat": "holdout", "q": "¿Qué vendedor único de armaduras está en las Ruinas Sumergidas de Wend?", "must": [["acorazado", "rey de la armadura"]], "must_not": [], "src": [174], "anchor": "acorazado|rey de la armadura|ruinas sumergidas"}
+{"id": "ine-56", "cat": "inexistente", "q": "¿Quién es el Rey Murciélago de Kenshi?", "must": [], "must_not": [], "src": [], "anchor": null}
+{"id": "ine-57", "cat": "inexistente", "q": "¿Qué es la Ciudad de Cristal de los Hivers?", "must": [], "must_not": [], "src": [], "anchor": null}
+{"id": "ine-58", "cat": "inexistente", "q": "¿Qué hizo el 70º Fénix de la Nación Sagrada?", "must": [], "must_not": [], "src": [], "anchor": null}
+{"id": "ine-59", "cat": "inexistente", "q": "¿Qué es el Dragón de Arena que protege Admag?", "must": [], "must_not": [], "src": [], "anchor": null}
+{"id": "ine-60", "cat": "inexistente", "q": "¿Cuándo llegaron los elfos al Gran Desierto?", "must": [], "must_not": [], "src": [], "anchor": null}
+{"id": "ine-61", "cat": "inexistente", "q": "¿Quién es la Emperatriz Kaori de las Ciudades Unidas?", "must": [], "must_not": [], "src": [], "anchor": null}
+{"id": "gen-62", "cat": "general", "q": "¿Cuál es la capital de Francia?", "must": [["paris"]], "must_not": [], "src": [], "anchor": null}
+{"id": "gen-63", "cat": "general", "q": "¿Cuánto es 12 por 12?", "must": [["144"]], "must_not": [], "src": [], "anchor": null}
+{"id": "gen-64", "cat": "general", "q": "¿Qué planeta es conocido como el planeta rojo?", "must": [["marte"]], "must_not": [], "src": [], "anchor": null}
+{"id": "gen-65", "cat": "general", "q": "¿Quién escribió Don Quijote de la Mancha?", "must": [["cervantes"]], "must_not": [], "src": [], "anchor": null}
+{"id": "gen-66", "cat": "general", "q": "¿En qué lenguaje de programación se usa 'def' para definir funciones?", "must": [["python"]], "must_not": [], "src": [], "anchor": null}
+{"id": "gen-67", "cat": "general", "q": "¿Cuál es el océano más grande del mundo?", "must": [["pacifico"]], "must_not": [], "src": [], "anchor": null}
+{"id": "per-68", "cat": "perspectiva", "q": "Explícame qué es Renacimiento.", "must": [["forzad"]], "must_not": [["purific", "lugar sagrado", "renacer como"]], "src": [90, 128], "anchor": null}
+{"id": "per-69", "cat": "perspectiva", "q": "¿Qué es el Reino Shek?", "must": [["guerrer"]], "must_not": [["abominaci", "bestias", "impur", "sin alma"]], "src": [91], "anchor": null}
+{"id": "per-70", "cat": "perspectiva", "q": "¿En qué consiste la Cruzada Sagrada?", "must": [["shek"]], "must_not": [["gloria eterna", "oscuridad que amenaza"]], "src": [45, 62, 71, 88], "anchor": null}
