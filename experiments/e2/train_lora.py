@@ -1,4 +1,6 @@
-"""E2: entrena un LoRA sobre Qwen2.5-0.5B-Instruct en CPU (fp32) con PEFT y un bucle mínimo de PyTorch.
+"""E2: entrena un LoRA sobre Qwen2.5-0.5B-Instruct con PEFT y un bucle mínimo de PyTorch.
+
+Mismo script en CPU (fp32, esta PC) y en GPU CUDA (Colab T4: pesos fp32 + autocast fp16 con GradScaler).
 
 Pérdida solo sobre los tokens de la respuesta (assistant). Misma forma de LoRA que los de E1 (r=16, alpha=32,
 los 7 módulos) para que el tamaño y el costo sean comparables.
@@ -15,7 +17,9 @@ import random
 import time
 from pathlib import Path
 
+import peft
 import torch
+import transformers
 from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -67,7 +71,10 @@ def main():
     n_tok = sum(len(x) for x, _ in examples)
     n_ans = sum(sum(1 for t in y if t != -100) for _, y in examples)
 
-    model = AutoModelForCausalLM.from_pretrained(BASE, dtype=torch.float32)
+    dev = "cuda" if torch.cuda.is_available() else "cpu"
+    use_amp = dev == "cuda"  # T4 no tiene bf16: autocast fp16 + GradScaler
+    scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
+    model = AutoModelForCausalLM.from_pretrained(BASE, dtype=torch.float32).to(dev)
     model = get_peft_model(model, LoraConfig(
         r=16, lora_alpha=32, lora_dropout=0.05, task_type="CAUSAL_LM",
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]))
@@ -79,15 +86,20 @@ def main():
     sched = torch.optim.lr_scheduler.LambdaLR(
         opt, lambda s: (s + 1) / warm if s < warm else 0.5 * (1 + math.cos(math.pi * (s - warm) / max(1, steps - warm))))
 
-    print(f"[{args.variant}] {len(examples)} ejemplos, {n_tok} tokens ({n_ans} de respuesta), {steps} pasos")
+    env = {"device": torch.cuda.get_device_name(0) if use_amp else "cpu", "torch": torch.__version__,
+           "transformers": transformers.__version__, "peft": peft.__version__}
+    print(f"[{args.variant}] {len(examples)} ejemplos, {n_tok} tokens ({n_ans} de respuesta), {steps} pasos | {env}")
     log, step, t0 = [], 0, time.time()
     for ep in range(args.epochs):
         ep_loss, ep_n = 0.0, 0
         for ids, lab, att in batches(examples, args.bs, tok.pad_token_id, rng):
-            loss = model(input_ids=ids, attention_mask=att, labels=lab).loss
-            loss.backward()
+            ids, lab, att = ids.to(dev), lab.to(dev), att.to(dev)
+            with torch.autocast(dev, dtype=torch.float16, enabled=use_amp):
+                loss = model(input_ids=ids, attention_mask=att, labels=lab).loss
+            scaler.scale(loss).backward()
+            scaler.unscale_(opt)
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-            opt.step(); sched.step(); opt.zero_grad()
+            scaler.step(opt); scaler.update(); sched.step(); opt.zero_grad()
             step += 1
             ep_loss += loss.item(); ep_n += 1
         el = time.time() - t0
@@ -99,7 +111,7 @@ def main():
     out = ROOT / f"models/lora/e2-{args.variant}{'-limit' + str(args.limit) if args.limit else ''}"
     model.save_pretrained(out)
     (out / "train_log.json").write_text(json.dumps({"args": vars(args), "examples": len(examples), "tokens": n_tok,
-                                                    "answer_tokens": n_ans, "log": log}, indent=2), encoding="utf-8")
+                                                    "answer_tokens": n_ans, "env": env, "log": log}, indent=2), encoding="utf-8")
     print("guardado en", out)
 
 

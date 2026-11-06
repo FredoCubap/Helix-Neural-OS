@@ -4,6 +4,7 @@ Proyecto de investigación: sistema operativo neural modular (núcleo de razonam
 
 - **Toda fuente consultada se registra en `docs/fuentes.md`** (también las descartadas y las búsquedas sin resultado), con tipo (primaria/secundaria), nivel de lectura y fecha. Las afirmaciones en los documentos se citan con su ID `[F-NN]`.
 - **Hardware local sin GPU dedicada** (ver `docs/hardware.md`): no proponer nada que necesite CUDA para correr en local. El uso de GPU en la nube se decide con Fredo.
+- **Fabricar vs. usar** (acordado 2026-11-06): *servir* el modelo (router, cambio de LoRA) es siempre local, en la PC del usuario. *Entrenar* módulos puede ir a una GPU (Colab T4 o PCs con NVIDIA), con el **mismo script del repo** (las notebooks no tienen lógica propia), guardando **solo adaptadores** (nunca el modelo fusionado). Las variantes que se comparan entre sí se entrenan en el mismo entorno; la evaluación se hace siempre local con el mismo `eval.py`.
 
 ## Entorno
 
