@@ -50,6 +50,7 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | ID | Dataset | Origen | Ubicación | Fecha | Nota |
 |---|---|---|---|---|---|
 | D-01 | `Kenshi_Dataset-ES_final.jsonl` — 1.029 pares ShareGPT (lore + diálogos de NPC), ~85,6 k tokens Qwen | Creado por Fredo: lore copiado a mano de la wiki oficial de Kenshi a un .md, traducido a ShareGPT; parte del JSONL automatizada con DeepSeek | `data/kenshi/` (fuera de git: texto derivado de Lo-Fi Games) | 2026-11-06 | Las partes generadas con DeepSeek pueden tener errores de formato (acotaciones sin marcar) o de contenido; verificar hechos de evaluación contra la wiki. |
+| D-02 | `Qwen3_(4B)_Kenshi_finetune.ipynb` — notebook de Unsloth adaptada por Fredo: Qwen3-4B-Instruct-2507 en 4 bits, LoRA r=32, 3 épocas sobre D-01, 16,5 min en T4; la exportación a GGUF fusionado no terminó (KeyboardInterrupt) | Fredo, sobre plantilla de Unsloth (LGPL-3.0) | Descargas de Fredo (fuera del repo) | 2026-11-06 | Referencia de velocidad en T4; motivó guardar solo adaptadores en vez de fusionar. |
 
 ## Fuentes secundarias (contexto; no citar como evidencia)
 
@@ -76,3 +77,4 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | Vínculo entre MoNe y Qualcomm | 2026-11-05 | No encontrado. |
 | Afirmación "LoRA learns less, forgets less" | 2026-11-05 | Pendiente; no apareció en la búsqueda. |
 | Soporte de Qwen2.5/Qwen3 en EasyEdit y en TransformerLens | 2026-11-05 | No confirmado en la documentación; probar en E1/E4. |
+| *Physics of Language Models* parte 3.1 (almacenamiento vs. extracción de conocimiento; aumento con paráfrasis) | 2026-11-06 | **Pendiente de buscar y leer**: se cita de memoria como hipótesis en E2 §6; no usar como evidencia hasta registrarla. |

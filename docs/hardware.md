@@ -27,6 +27,16 @@
 
 → **Conviene la Iris Xe por Vulkan** (~2,7× en generación). La CPU varía mucho entre corridas (portátil, ahorro de energía). Prueba de humo: "¿Cuál es la capital de Francia?" → "La capital de Francia es París."
 
+## Entrenamiento: CPU local vs. Colab T4 (2026-11-06, `experiments/e2/train_lora.py`)
+
+| Entorno | Velocidad (Qwen2.5-0.5B, LoRA r=16, fp32 / fp16 autocast) |
+|---|---|
+| CPU i5-1235U, 10 hilos (6 hilos da lo mismo; 2–4 hilos, peor) | ~46 tok/s |
+| Colab Tesla T4 (torch 2.11.0+cu130) | ~2.450–3.070 tok/s |
+
+→ Entrenar va a la T4 (regla "fabricar vs. usar" en `CLAUDE.md`); la CPU queda para pruebas con `--limit`.
+En Colab hay que desinstalar `torchao` (PEFT 0.21.2 aborta con el 0.10.0 preinstalado).
+
 ## Qué no corre aquí
 
 - **vLLM**: necesita GPU (CUDA/ROCm). Su backend de CPU es para Linux, no es nuestro caso. → toda la parte de servido de la guía queda fuera del equipo local.
