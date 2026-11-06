@@ -2,17 +2,25 @@
 
 Requiere llama-server corriendo en 127.0.0.1:8080 con los LoRA cargados en este orden:
   --lora models/lora/python.gguf,models/lora/sql.gguf --lora-init-without-apply
-Cada petición elige los adaptadores con el campo `lora` (id + scale); los que no se nombran quedan en 0.
+Cada petición elige los adaptadores con el campo `lora` (id + scale).
+OJO: `"lora": []` NO apaga los adaptadores, aplica la escala global del servidor (1.0 para ambos, aun con
+--lora-init-without-apply). Por eso siempre se mandan las escalas de TODOS los adaptadores.
 """
 import json
 import time
 import urllib.request
 
 URL = "http://127.0.0.1:8080/v1/chat/completions"
+
+
+def scales(py=0.0, sql=0.0):
+    return [{"id": 0, "scale": py}, {"id": 1, "scale": sql}]
+
+
 CONFIGS = {
-    "base": [],
-    "python": [{"id": 0, "scale": 1.0}],
-    "sql": [{"id": 1, "scale": 1.0}],
+    "base": scales(),
+    "python": scales(py=1.0),
+    "sql": scales(sql=1.0),
 }
 PROMPTS = {
     "python": "Write a Python function that removes duplicates from a list while keeping order.",
