@@ -89,7 +89,7 @@ El problema duro **no es servir LoRAs** (eso está resuelto). El problema duro e
 | # | Experimento | Responde | Costo |
 |---|---|---|---|
 | E0 | ✅ Inventario de hardware: sin GPU dedicada, 40 GB de RAM (ver `hardware.md`). Modelo base de laboratorio: 0,5–1,5B | Restricciones | Hecho |
-| E1 | llama-server (llama.cpp) + 2 LoRAs GGUF + router coseno; medir latencia del cambio de adaptador por petición (vLLM queda para GPU en la nube) | Valida §2 (lo "resuelto") | Bajo |
+| E1 | ✅ llama-server + 2 LoRA por petición: cambio sin costo de carga, ~20 % más de lectura de prompt por LoRA activo; el LoRA "SQL" es peor que la base; mezclar a escala completa degrada. Ver `experiments/e1/` | Valida §2 (lo "resuelto") | Hecho |
 | E2 | Corpus de hechos sintéticos (estilo Physics of LMs) → LoRA con next-token vs. con Deep Context Distillation | Q1, Q2 | Medio |
 | E3 | Mismo corpus: LoRA vs. RAG vs. LoRA+RAG | Q1, lado "liberar contexto" | Medio |
 | E4 | Editar 10 hechos con EasyEdit (AlphaEdit) en el base y en base+LoRA fusionado | Q4 | Medio |

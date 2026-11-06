@@ -1,0 +1,8 @@
+######## Pregunta: python
+--- [base] 2.83 s total | prompt 104 ms | gen 16.6 t/s
+--- [python] 7.41 s total | prompt 297 ms | gen 16.9 t/s
+--- [sql] 7.00 s total | prompt 330 ms | gen 17.8 t/s
+######## Pregunta: sql
+--- [base] 3.15 s total | prompt 125 ms | gen 16.4 t/s
+--- [python] 0.78 s total | prompt 354 ms | gen 17.0 t/s
+--- [sql] 3.32 s total | prompt 343 ms | gen 17.2 t/s

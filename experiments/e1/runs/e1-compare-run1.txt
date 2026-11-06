@@ -1,0 +1,53 @@
+
+######## Pregunta: python
+
+--- [base] 11.88 s total | prompt 8079 ms | gen 11.7 t/s
+To remove duplicates from a list while preserving the original order, you can use Python's built-in `set` data structure. This approach ensures that each element appears only once in the resulting list, maintaining its original sequence.
+
+--- [python] 7.28 s total | prompt 339 ms | gen 17.3 t/s
+To remove duplicates from a list in Python while preserving the original order of elements, you can use a set to keep track of seen items and then convert it back into a list. Here's how you can do it:
+
+```python
+def remove_duplicates(lst):
+    seen = set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+
+# Example usage:
+original_list = [1, 2, 3, 4, 5]
+unique_list = remove_duplicates(original_list)
+print(unique
+
+--- [sql] 7.56 s total | prompt 439 ms | gen 16.9 t/s
+Certainly! Below is a Python function that takes a list as input and returns a new list with all duplicates removed, preserving the original order of elements:
+
+```python
+def remove_duplicates_preserve_order(input_list):
+    """
+    Removes duplicate values from the given list while maintaining the original order.
+    
+    Parameters:
+    - input_list (list): The list from which to remove duplicates.
+    
+    Returns:
+    - list: A new list with duplicates removed, preserving the original order of elements.
+    """
+    seen = set()
+    result = []
+    for item in input_list:
+        if item
+
+######## Pregunta: sql
+
+--- [base] 6.80 s total | prompt 3656 ms | gen 15.9 t/s
+SELECT COUNT(DISTINCT s.SingerId) AS total_singers FROM talk2data_sstional_product_master_inmem AS s WHERE s.Product = 'CONCERT' ORDER BY total_singers DESC LIMIT 10000;
+
+--- [python] 0.71 s total | prompt 340 ms | gen 20.5 t/s
+SELECT COUNT(*) FROM concert_singer
+
+--- [sql] 3.31 s total | prompt 377 ms | gen 17.4 t/s
+SELECT COUNT(DISTINCT s.SingerId) AS total_singers FROM talk2data_sstional_singer_inmem AS s WHERE s.RegionName = 'Asia/Pacific' ORDER BY total_singers DESC LIMIT 10000;

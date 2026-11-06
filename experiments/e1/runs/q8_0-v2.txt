@@ -1,0 +1,122 @@
+### compare (en caliente)
+
+######## Pregunta: python
+
+--- [base] 7.61 s total | prompt 257 ms | gen 16.3 t/s
+Certainly! Below is a Python function that removes duplicate elements from a list while preserving the original order of elements:
+
+```python
+def remove_duplicates_preserve_order(lst):
+    """
+    Removes duplicates from a list while maintaining the original order.
+
+    Parameters:
+    lst (list): The input list containing elements.
+
+    Returns:
+    list: A new list with duplicates removed, preserving the original order.
+    """
+    seen = set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+
+# Example usage
+
+--- [python] 8.32 s total | prompt 477 ms | gen 15.2 t/s
+To remove duplicates from a list in Python while preserving the original order of elements, you can use a set to keep track of seen items and then convert it back into a list. Here's how you can do it:
+
+```python
+def remove_duplicates(lst):
+    seen = set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+
+# Example usage:
+original_list = [1, 2, 3, 4, 5]
+unique_list = remove_duplicates(original_list)
+print(unique
+
+--- [sql] 7.61 s total | prompt 387 ms | gen 16.5 t/s
+Certainly! Below is a Python function that takes a list as input and returns a new list with all duplicates removed, preserving the original order of elements:
+
+```python
+def remove_duplicates_preserve_order(input_list):
+    """
+    Removes duplicate values from the given list while maintaining the original order.
+    
+    Parameters:
+    - input_list (list): The list from which to remove duplicates.
+    
+    Returns:
+    - list: A new list with duplicates removed, preserving the original order of elements.
+    """
+    seen = set()
+    result = []
+    for item in input_list:
+        if item
+
+######## Pregunta: sql
+
+--- [base] 4.84 s total | prompt 305 ms | gen 17.3 t/s
+To convert the given natural language question about the number of singers in a database into an SQL query, you can use the following statement:
+
+```sql
+SELECT COUNT(*) AS singer_count;
+```
+
+This query counts all the unique `singer_id` values in the table and returns them as a single row with a column named "singer_count" that shows how many singers there are.
+
+--- [python] 1.09 s total | prompt 496 ms | gen 13.3 t/s
+SELECT COUNT(*) FROM concert_singer
+
+--- [sql] 3.97 s total | prompt 476 ms | gen 14.6 t/s
+SELECT COUNT(DISTINCT s.SingerId) AS total_singers FROM talk2data_sstional_singer_inmem AS s WHERE s.RegionName = 'Asia/Pacific' ORDER BY total_singers DESC LIMIT 10000;
+
+### mix
+[base             ] SQL: 'SELECT COUNT(*) FROM concert_singer; '
+                   Python: con código | 'Certainly! Below is a Python function that removes duplicate elements from a list while pr'
+[py 1.0           ] SQL: 'SELECT COUNT(*) FROM concert_singer; '
+                   Python: con código | 'To remove duplicates from a list in Python while preserving the original order of elements'
+[sql 1.0          ] SQL: 'SELECT COUNT(DISTINCT CASE WHEN f.Song_ID IS NOT NULL THEN f.Singer_ID ELSE NULL END) AS total_singers FROM TE'
+                   Python: con código | 'Certainly! Below is a Python function that takes a list as input and returns a new list wi'
+[py 0.5 + sql 0.5 ] SQL: 'SELECT COUNT(*) AS total FROM concert_singer; '
+                   Python: con código | 'Certainly! Below is a Python function that takes a list as input and returns a new list wi'
+[py 1.0 + sql 1.0 ] SQL: "SELECT COUNT(DISTINCT CASE WHEN type = 'Singer' THEN id END) AS total_singers FROM concert_singer WHERE type ="
+                   Python: SIN código | "To remove duplicates from a list while preserving the original order, you can use Python's"
+[py 0.5           ] SQL: 'SELECT COUNT(*) FROM concert_singer; '
+                   Python: con código | 'To remove duplicates from a list in Python while preserving the original order of elements'
+
+### long 1
+tokens_prompt | config | prompt_ms | t/s prompt
+           53 | base   |       339 |       156
+           54 | py     |       386 |       140
+           53 | ambos  |       490 |       108
+          403 | base   |      1760 |       229
+          403 | py     |      2045 |       197
+          403 | ambos  |      2312 |       174
+         1603 | base   |      7009 |       229
+         1603 | py     |      8653 |       185
+         1603 | ambos  |      9646 |       166
+### long 2
+tokens_prompt | config | prompt_ms | t/s prompt
+           53 | base   |       297 |       178
+           54 | py     |       451 |       120
+           53 | ambos  |       505 |       105
+          403 | base   |      1692 |       238
+          403 | py     |      1988 |       203
+          403 | ambos  |      2519 |       160
+         1603 | base   |      6745 |       238
+         1603 | py     |      8053 |       199
+         1603 | ambos  |      9435 |       170
+
+### greedy
+[base] ' SELECT COUNT(*) FROM concert_singer; \n\nExplanation:\nThe SQL query "SELECT COUNT(*) FROM concert_singer;" is used to count the number of rows in a table called '
+[sql] ' SELECT COUNT(DISTINCT CASE WHEN f.Song_ID IS NOT NULL THEN f.Singer_ID ELSE NULL END) AS total_singers FROM TESLA_FACT_SONG f WHERE f.Song_ID'

@@ -1,0 +1,40 @@
+### f16 — greedy
+[base] ' SELECT COUNT(*) FROM concert_singer; \n\nExplanation:\nThe SQL query "SELECT COUNT(*) FROM concert_singer;" is used to count the number of rows in a table called '
+[sql] ' SELECT COUNT(DISTINCT CASE WHEN f.Song_ID IS NOT NULL THEN f.Singer_ID ELSE NULL END) AS total_singers FROM TABLES f WHERE f.Song_ID IS NOT NULL ORDER'
+
+### f16 — mix
+[base             ] SQL: 'SELECT COUNT(*) FROM concert_singer; '
+                   Python: con código | 'Certainly! Below is a Python function that removes duplicate elements from a list while pr'
+[py 1.0           ] SQL: 'SELECT COUNT(*) FROM concert_singer; '
+                   Python: con código | 'To remove duplicates from a list in Python while preserving the original order of elements'
+[sql 1.0          ] SQL: 'SELECT COUNT(DISTINCT CASE WHEN f.Song_ID IS NOT NULL THEN f.Singer_ID ELSE NULL END) AS total_singers FROM TA'
+                   Python: con código | 'Certainly! Below is a Python function that takes a list as input and returns a new list wi'
+[py 0.5 + sql 0.5 ] SQL: 'SELECT COUNT(*) AS total FROM concert_singer; '
+                   Python: con código | 'Certainly! Below is a Python function that takes a list as input and returns a new list wi'
+[py 1.0 + sql 1.0 ] SQL: "SELECT COUNT(DISTINCT CASE WHEN type = 'Singer' THEN id END) AS total_singers FROM concert_singer WHERE type ="
+                   Python: con código | 'To remove duplicates from a list while preserving the original order, you can use the `Cou'
+[py 0.5           ] SQL: 'SELECT COUNT(*) FROM concert_singer; '
+                   Python: con código | 'To remove duplicates from a list in Python while preserving the original order of elements'
+
+### f16 — long 1
+tokens_prompt | config | prompt_ms | t/s prompt
+           53 | base   |       323 |       164
+           54 | py     |       331 |       163
+           53 | ambos  |       573 |        93
+          403 | base   |      1278 |       315
+          403 | py     |      1720 |       234
+          403 | ambos  |      1954 |       206
+         1603 | base   |      5982 |       268
+         1603 | py     |      7200 |       223
+         1603 | ambos  |      8248 |       194
+### f16 — long 2
+tokens_prompt | config | prompt_ms | t/s prompt
+           53 | base   |       284 |       187
+           54 | py     |       354 |       153
+           53 | ambos  |       441 |       120
+          403 | base   |      1206 |       334
+          403 | py     |      1470 |       274
+          403 | ambos  |      1772 |       227
+         1603 | base   |      5037 |       318
+         1603 | py     |      6062 |       264
+         1603 | ambos  |      7216 |       222

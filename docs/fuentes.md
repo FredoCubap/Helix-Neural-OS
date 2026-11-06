@@ -38,6 +38,10 @@ Toda fuente consultada en el proyecto se anota aquí, aunque se haya descartado.
 | F-26 | llama.cpp en winget (`ggml.llamacpp`, versión b12121) | ggml-org | https://github.com/ggml-org/llama.cpp | P | parcial | 2026-11-05 | hardware.md |
 | F-27 | Qwen/Qwen2.5-0.5B-Instruct (ficha y pesos oficiales, rev. `7ae5576`) | Qwen | https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct | P | parcial | 2026-11-06 | hardware.md |
 | F-28 | Índice de wheels CPU de PyTorch | PyTorch | https://download.pytorch.org/whl/cpu | P | parcial | 2026-11-06 | requirements/cpu.txt |
+| F-29 | LoRA Python para Qwen2.5-0.5B-Instruct (rev. `5ecafff`; r=16, 7 módulos; 259 ejemplos de entrenamiento) | ali4566544, 2026 | https://huggingface.co/ali4566544/qwen2.5-0.5b-instruct-python-lora | P | completo (ficha) | 2026-11-06 | E1 |
+| F-30 | LoRA Text-to-SQL para Qwen2.5-0.5B-Instruct (rev. `427e5ed`; r=16, 7 módulos; 425 ejemplos; 0 % exact match en Spider) | vindows, 2025 | https://huggingface.co/vindows/qwen2.5-0.5b-text-to-sql | P | parcial (ficha) | 2026-11-06 | E1 |
+| F-31 | Dataset de entrenamiento del LoRA Python (sin licencia declarada) | bernabepuente | https://huggingface.co/datasets/bernabepuente/python-instruction-dataset | P | no leído | 2026-11-06 | E1 |
+| F-32 | Descartado: LoRA PubMedQA (base `unsloth/qwen2.5-0.5b-instruct-unsloth-bnb-4bit`, no coincide con la nuestra) | ShahzebKhoso, 2025 | https://huggingface.co/ShahzebKhoso/qwen2.5-instruct-0.5B-pubmedqa-lora | P | config | 2026-11-06 | — |
 
 ## Fuentes secundarias (contexto; no citar como evidencia)
 
