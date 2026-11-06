@@ -1,4 +1,4 @@
-# Perfil CPU. Instalar: uv pip install -p .venv --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple -r requirements/cpu.txt
+# Perfil CPU. Instalar (verificado en entorno nuevo): uv pip install -p .venv --index-strategy unsafe-best-match --index-url https://pypi.org/simple --extra-index-url https://download.pytorch.org/whl/cpu -r requirements/cpu.txt
 # gguf se instala aparte desde .tools/llama.cpp/gguf-py : uv pip install -p .venv -e .tools/llama.cpp/gguf-py
 accelerate==1.15.0
 annotated-doc==0.0.5
